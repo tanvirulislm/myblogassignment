@@ -1,8 +1,10 @@
 <script setup>
+import Navbar from "@/Components/Navbar.vue";
 import { Link } from "@inertiajs/vue3";
 </script>
 
 <template>
+    <Navbar />
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8 text-center">

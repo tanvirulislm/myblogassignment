@@ -109,12 +109,12 @@
 
 ## 🎥 Project Presentation Video
 
-[Link to your Google Drive video presentation here]
+[![Watch the video](https://img.youtube.com/vi/nPL-9Fwf9i4/hqdefault.jpg)](https://youtu.be/nPL-9Fwf9i4)
 
 ---
 
 ## 💾 Database SQL File
 
-[Database SQL File name, example: `database.sql`]
+[Database SQL File name: `database.sql`]
 
 ---

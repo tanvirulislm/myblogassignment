@@ -2,6 +2,7 @@
 import { router } from "@inertiajs/vue3";
 import { createToaster } from "@meforma/vue-toaster";
 import { ref } from "vue";
+import Navbar from "@/Components/Navbar.vue";
 
 const toaster = createToaster();
 const formData = ref({
@@ -27,6 +28,7 @@ function login() {
 </script>
 
 <template>
+    <Navbar />
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-4">

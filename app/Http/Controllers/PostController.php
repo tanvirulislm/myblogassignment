@@ -136,11 +136,16 @@ class PostController extends Controller
         $tagIds = [];
         if (!empty($validatedData['tags'])) {
             foreach ($validatedData['tags'] as $tagName) {
-                if (!empty(trim($tagName))) {
+                $trimmedTagName = trim($tagName);
+                if (!empty($trimmedTagName)) {
+                    $tag = Tag::firstOrCreate(['name' => $trimmedTagName]);
                     $tagIds[] = $tag->id;
                 }
             }
         }
+
+
+        $post->tags()->sync($tagIds);
 
         $post->tags()->sync($tagIds);
 

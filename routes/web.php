@@ -32,9 +32,9 @@ Route::get('/login', [UserController::class, 'Login']);
 
 Route::post('/public-posts', [PostController::class, 'PublicPosts']);
 Route::get('/public-posts', [PostController::class, 'PublicPosts']);
-// Route::get('/api/public-posts', [PostController::class, 'PublicPosts']);
 Route::get('/public-posts/{id}', [PostController::class, 'ShowSinglePost']);
 
+Route::post('/posts/{postId}/comment-list', [CommentController::class, 'CommentList']);
 
 // Tags Routes
 Route::post('/tags', [TagController::class, 'GetTags']);
@@ -74,7 +74,7 @@ Route::middleware(TokenVerificationMiddleware::class)->group(function () {
 
     // All Comment Routes
     Route::post('/posts/{postId}/comments', [CommentController::class, 'CommentCreate']);
-    Route::post('/posts/{postId}/comment-list', [CommentController::class, 'CommentList']);
+    // Route::post('/posts/{postId}/comment-list', [CommentController::class, 'CommentList']);
     Route::post('/comment/{commentId}', [CommentController::class, 'CommentUpdate']);
     Route::post('/comments/{commentId}', [CommentController::class, 'CommentDelete']);
 
